@@ -21,32 +21,35 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>3.6.1</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
                     <skip>true</skip>
-                    <source>1.5</source>
-                    <target>1.5</target>
+                    <source>1.6</source>
+                    <target>1.6</target>
                 </configuration>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.4</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>
-                            <excludes>
-                                <exclude>**/test/*.class</exclude>
-                            </excludes>
-                        </configuration>
-                    </execution>
-                </executions>
+                <version>3.0.2</version>
+                <configuration>
+                    <excludes>**/test/*.class, **/test</excludes>
+                </configuration>
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>nexus distribution releases repository</name>
+            <url>http://repo1.sufor.cc/repository/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>nexus distribution snapshot repository</name>
+            <url>http://repo1.sufor.cc/repository/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
