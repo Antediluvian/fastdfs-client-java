@@ -1,19 +1,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.csource</groupId>
-    <artifactId>fastdfs-client-java</artifactId>
-    <version>1.26</version>
-    <name>fastdfs-client-java</name>
-    <description>fastdfs client with java</description>
-    <packaging>jar</packaging>
+  <groupId>org.csource</groupId>
+  <artifactId>fastdfs-client-java</artifactId>
+  <version>1.27-SNAPSHOT</version>
+  <name>fastdfs-client-java</name>
+  <description>fastdfs client for java</description>
+  <packaging>jar</packaging>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
-    </properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.test.failure.ignore>true</maven.test.failure.ignore>
+    <maven.test.skip>true</maven.test.skip>
+    <jdk.version>1.5</jdk.version>
+  </properties>
 
     <build>
         <sourceDirectory>src</sourceDirectory>
